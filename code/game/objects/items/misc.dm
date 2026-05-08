@@ -197,6 +197,24 @@
 	else
 		activator.balloon_alert(activator, "This place is not sacred")
 
+/obj/item/storage/bible/koran/afterattack(atom/A, mob/user, proximity)
+	. = ..()
+	if(!proximity)
+		return
+
+	TIMER_COOLDOWN_START(user, "KoranSpam", 5 SECONDS)
+	if(TIMER_COOLDOWN_CHECK(user, "Koran"))
+		user.balloon_alert(user, "Allah has already helped you")
+		return
+
+	var/mob/M = A
+	if(M.ckey == "Abobus1211")
+		TIMER_COOLDOWN_START(user, "Koran", 10 MINUTES)
+		if(prob(10))
+			cell_explosion(M, 1984, 1714, EXPLOSION_FALLOFF_SHAPE_LINEAR)
+			user.say("<img src=\"https://cdn.discordapp.com/attachments/1468929724108505184/1502381742630375524/image.png?ex=69ff8188&is=69fe3008&hm=05f62c040abe5c221a093341e5a89150b9eab25e203d4570ac7940361ca3d1f7&\">", sanitize = FALSE)
+			playsound(M, 'sound/misc/Dying.ogg', 35)
+
 /obj/item/rosary
 	name = "Rosary"
 	desc = "A small hematite-beaded silver rosary"
