@@ -168,7 +168,7 @@
 /datum/supply_packs/medical/defibrillator_compact
 	name = "Compact Defibrillator"
 	notes = "contains compact defibrillator"
-	contains = list(/obj/item/clothing/gloves/defibrillator)
+	contains = list(/obj/item/defibrillator/compact)
 	cost = 120
 	containertype = /obj/structure/closet/crate/secure/surgery
 	access = ACCESS_MARINE_MEDBAY
