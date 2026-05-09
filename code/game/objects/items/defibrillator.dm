@@ -347,6 +347,6 @@
 	worn_icon_state = "compct"
 	equip_slot_flags = ITEM_SLOT_POCKET
 	w_class = WEIGHT_CLASS_SMALL
-	charge_cost = 500
+	charge_cost = 250
 	defibrillator_healing = 2
 	shock_time = 3 SECONDS
