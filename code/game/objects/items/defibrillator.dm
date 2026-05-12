@@ -343,8 +343,6 @@
 	advanced = TRUE
 
 /obj/item/defibrillator/compact
-	icon_state = "compact"
-	worn_icon_state = "compct"
 	equip_slot_flags = ITEM_SLOT_POCKET
 	w_class = WEIGHT_CLASS_SMALL
 	charge_cost = 250
