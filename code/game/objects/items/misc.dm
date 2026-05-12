@@ -202,7 +202,7 @@
 	if(!proximity)
 		return
 
-	if(TIMER_COOLDOWN_CHECK(user, "KoranSpam"))
+	if(TIMER_COOLDOWN_RUNNING(user, "KoranSpam"))
 		user.adjust_brain_loss(1, TRUE)
 		return
 	TIMER_COOLDOWN_START(user, "KoranSpam", 5 SECONDS)
@@ -213,7 +213,7 @@
 
 	var/client/C = M.client
 	if(GLOB.admins.Find(C, 1, 0))
-		if(TIMER_COOLDOWN_CHECK(user, "Koran"))
+		if(TIMER_COOLDOWN_RUNNING(user, "Koran"))
 			user.balloon_alert(user, "Allah has already helped you")
 			return
 		TIMER_COOLDOWN_START(user, "Koran", 10 MINUTES)
