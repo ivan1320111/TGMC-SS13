@@ -52,7 +52,7 @@ const NuclearBombContent = (props) => {
     green,
     blue,
     current_site,
-    nuke_ineligible_site,
+    nuke_ineligible_site = [],
   } = data;
   return (
     <Stack vertical fill>
