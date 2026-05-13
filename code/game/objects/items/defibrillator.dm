@@ -345,6 +345,7 @@
 /obj/item/defibrillator/compact
 	equip_slot_flags = ITEM_SLOT_POCKET
 	w_class = WEIGHT_CLASS_SMALL
+	icon_state = "pocket_defib" //спасибо tarsonis_raff и lorddeferson за иконку
 	charge_cost = 250
 	defibrillator_healing = 2
 	shock_time = 3 SECONDS
