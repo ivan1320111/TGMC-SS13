@@ -49,20 +49,14 @@ Instead of being uniform, it starts out a littler slower, goes fast in the middl
 
 //Basic megaman-like animation. No bells or whistles, but looks nice.
 /proc/animation_teleport_quick_out(atom/A, speed = 10)
-	A.status_flags |= INCORPOREAL
-	var/initial_matrix = A.transform
 	animate(A, transform = matrix(0, 4, MATRIX_SCALE), alpha = 0, time = speed, easing = BACK_EASING)
-	addtimer(CALLBACK(A, PROC_REF(transform_initial_matrix), A, initial_matrix), speed)
 	return speed
 
 //We want to make sure to reset color here as it can be changed by other animations.
 /proc/animation_teleport_quick_in(atom/A, speed = 10)
-	A.status_flags |= INCORPOREAL
-	var/initial_matrix = A.transform
 	A.transform = matrix(0, 4, MATRIX_SCALE)
 	A.alpha = 0 //Start with transparency, just in case.
 	animate(A, alpha = 255, transform = null, color = "#FFFFFF", time = speed, easing = BACK_EASING)
-	addtimer(CALLBACK(A, PROC_REF(transform_initial_matrix), A, initial_matrix), speed)
 	return speed
 
 /*A magical teleport animation, for when the person is transported with some magic. Good for Halloween type events.

@@ -117,23 +117,23 @@
 
 	if(teleport_x && teleport_y && teleport_z)
 		SEND_SIGNAL(A, COMSIG_ATOM_TELEPORT, src)
-		/*switch(teleportation_type)
+		switch(teleportation_type)
 			if(1)
 				sleep(animation_teleport_quick_out(A)) //Sleep for the duration of the animation.
 			if(2)
 				sleep(animation_teleport_magic_out(A))
 			if(3)
-				sleep(animation_teleport_spooky_out(A))*/
+				sleep(animation_teleport_spooky_out(A))
 
 		if(A?.loc)
 			A.forceMove(get_turf(locate(teleport_x, teleport_y, teleport_z)))
-			/*switch(teleportation_type)
+			switch(teleportation_type)
 				if(1)
 					animation_teleport_quick_in(A)
 				if(2)
 					animation_teleport_magic_in(A)
 				if(3)
-					animation_teleport_spooky_in(A)*/
+					animation_teleport_spooky_in(A)
 
 
 /* Random teleporter, teleports atoms to locations ranging from teleport_x - teleport_x_offset, etc */
