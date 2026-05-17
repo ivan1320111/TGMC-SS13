@@ -249,11 +249,6 @@
 		to_chat(operator, "[src] cannot be rotated while anchored.")
 		return FALSE
 
-	if(TIMER_COOLDOWN_FINISHED(src, COOLDOWN_MOUNTED_GUN_ROTATE))
-		to_chat(operator, span_warning("[src] cannot be rotated so violently."))
-		stop_fire()
-		return FALSE
-
 	var/list/leftright = LeftAndRightOfDir(dir)
 	var/left = leftright[1] - 1
 	var/right = leftright[2] + 1
